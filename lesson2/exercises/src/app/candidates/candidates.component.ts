@@ -23,6 +23,17 @@ export class CandidatesComponent implements OnInit {
   ngOnInit() {
   }
 
+  addToCrew(selectedCandidate: object) {
+    if (selectedCandidate &&!this.crew.includes(selectedCandidate)) {
+      this.crew.push(selectedCandidate);
+    }
+  }
+
+  changeMissionName(name: string) {
+    this.missionName = name
+    return false;
+  }
+
   // Code the addToCrew function here:
 
 
